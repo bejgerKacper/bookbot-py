@@ -9,6 +9,9 @@ def main():
 def open_txt_file(file_path):
     return open(file_path).read()
 
+def get_words_count(txt_file):
+    return len(txt_file.split())
+
 def print_report(words, char_dictionary, book_path):
     print(f"--- Begin raport of book {book_path} ---")
     print(f"{words} words found in the document")
@@ -34,8 +37,5 @@ def count_letters(text_file):
         else:
             char_dictionary[lowered] = 1
     return char_dictionary
-
-def count_words(string_file): 
-    return len(string_file.split())
 
 main()
