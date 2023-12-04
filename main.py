@@ -6,6 +6,9 @@ def main():
     chars_list = get_list_alpha_chars(chars_dict)
     print_report(file_path, words_count, chars_list, chars_dict)
 
+def open_txt_file(file_path):
+    return open(file_path).read()
+
 def print_report(words, char_dictionary, book_path):
     print(f"--- Begin raport of book {book_path} ---")
     print(f"{words} words found in the document")
@@ -31,10 +34,6 @@ def count_letters(text_file):
         else:
             char_dictionary[lowered] = 1
     return char_dictionary
-
-def open_file(file_path):
-    with open(file_path) as f:
-        return f.read()
 
 def count_words(string_file): 
     return len(string_file.split())
