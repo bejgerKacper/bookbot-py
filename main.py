@@ -1,3 +1,11 @@
+def main():
+    file_path = "books/frankenstein.txt"
+    txt_file = open_txt_file(file_path)
+    words_count = get_words_count(txt_file)
+    chars_dict = get_chars_dict(txt_file)
+    chars_list = get_list_alpha_chars(chars_dict)
+    print_report(file_path, words_count, chars_list, chars_dict)
+
 def print_report(words, char_dictionary, book_path):
     print(f"--- Begin raport of book {book_path} ---")
     print(f"{words} words found in the document")
@@ -30,12 +38,5 @@ def open_file(file_path):
 
 def count_words(string_file): 
     return len(string_file.split())
-
-def main():
-    book_path = "books/frankenstein.txt"
-    text_file = open_file(book_path)
-    words_counted = count_words(text_file)
-    char_dictionary = count_letters(text_file)
-    print_report(words_counted, char_dictionary, book_path)
 
 main()
