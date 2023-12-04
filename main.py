@@ -35,13 +35,11 @@ def get_list_alpha_chars(chars_dict):
     chars_list.sort()
     return chars_list
 
-def print_report(words, char_dictionary, book_path):
-    print(f"--- Begin raport of book {book_path} ---")
-    print(f"{words} words found in the document")
-    chars = dictionary_to_list(char_dictionary)
-    chars.sort()
-    for char in chars:
-        print(f"The {char} character was found {char_dictionary[char]} times")
-    print("--- End raport ---")
+def print_report(file_path, words_count, chars_list, chars_dict):
+    print(f"--- Begin raport of book {file_path} ---")
+    print(f"{words_count} words found in the document.")
+    for char in chars_list:
+        print(f"The {char} character was found {chars_dict[char]} times.")
+    print(f"--- End raport ---")
 
 main()
