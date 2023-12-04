@@ -1,10 +1,11 @@
 def count_letters(string_file):
     letter_dictionary = {}
     for letter in string_file:
-        if letter in letter_dictionary:
-            letter_dictionary[letter] += 1
+        lowered = letter.lower()
+        if lowered in letter_dictionary:
+            letter_dictionary[lowered] += 1
         else:
-            letter_dictionary[letter] = 1
+            letter_dictionary[lowered] = 1
     print(letter_dictionary)
 
 def open_file(file_path):
