@@ -44,12 +44,10 @@ def print_report(file_path, words_count, chars_list, chars_dict):
 
 main()
 
-def count_letters(text_file):
-    char_dictionary = {}
-    for letter in text_file:
-        lowered = letter.lower()
-        if lowered in char_dictionary:
-            char_dictionary[lowered] += 1
-        else:
-            char_dictionary[lowered] = 1
-    return char_dictionary
+
+def dictionary_to_list(char_dictionary):
+    char_list = []
+    for char in char_dictionary:
+        if char.isalpha():
+            char_list.append(char)
+    return char_list
