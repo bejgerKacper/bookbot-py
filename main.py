@@ -12,6 +12,9 @@ def open_txt_file(file_path):
 def get_words_count(txt_file):
     return len(txt_file.split())
 
+def get_lower_chars(txt_file):
+    return txt_file.lower()
+
 def print_report(words, char_dictionary, book_path):
     print(f"--- Begin raport of book {book_path} ---")
     print(f"{words} words found in the document")
