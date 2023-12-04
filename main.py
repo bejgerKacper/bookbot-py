@@ -1,6 +1,6 @@
-def count_letters(strings):
+def count_letters(string_file):
     letter_dictionary = {}
-    for letter in strings:
+    for letter in string_file:
         if letter in letter_dictionary:
             letter_dictionary[letter] += 1
         else:
@@ -9,17 +9,15 @@ def count_letters(strings):
 
 def open_file(file_path):
     with open(file_path) as f:
-        text_file = f.read()
-    return text_file
+        return f.read()
 
-def split_text(text_file): 
-    words = text_file.split()
-    return len(words)
+def split_text(string_file): 
+    return len(text_file.split())
 
 def main():
-    text_file = open_file("/Users/kacper-bejger/workspace/github.com/bejgerKacper/bookbot-py/books/frankenstein.txt")
+    string_file = open_file("/Users/kacper-bejger/workspace/github.com/bejgerKacper/bookbot-py/books/frankenstein.txt")
     # words = split_text(text_file)
     # print(words)
-    count_letters(text_file)
+    count_letters(string_file)
 
 main()
